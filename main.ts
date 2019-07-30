@@ -10,6 +10,7 @@ async function start() {
         console.log(msg.data.message);
         nc.publish(msg.reply!, {message: "ok"})
     },{queue: 'b'});
+
     let result = await nc.request("test.a.b.c", 1000, {message: "Hello"});
     console.log(result.data.message);
 }

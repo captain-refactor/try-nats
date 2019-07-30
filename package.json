@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node main.ts",
+    "streaming:start": "ts-node streaming.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "nats:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-main nats"
+    "nats:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-main nats",
+    "nats-streaming:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-streaming nats-streaming"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^12.6.8",
+    "node-nats-streaming": "^0.2.6",
     "ts-nats": "^1.2.4",
     "ts-node": "^8.3.0",
     "ts-node-dev": "^1.0.0-pre.40",
