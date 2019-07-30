@@ -8,7 +8,8 @@
     "streaming:start": "ts-node streaming.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "nats:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-main nats",
-    "nats-streaming:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-streaming nats-streaming"
+    "nats-streaming:run": "docker run -d -p 4222:4222 -p 6222:6222 -p 8222:8222 --name nats-streaming nats-streaming -m 8222",
+    "dashboard": "docker run -p 8282:8282 kuali/nats-streaming-console"
   },
   "keywords": [],
   "author": "",
